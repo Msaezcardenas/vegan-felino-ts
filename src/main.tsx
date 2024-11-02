@@ -23,6 +23,19 @@ import App from './App.tsx';
 
 //Single Page Application
 // esto es solo una pagina, que se va actualizando
+
+// HACE DETECCION DE CAMBIOS
+// React hace trigger-> es un evento que inicia un proceso de RENDER
+//  Trigger- inicial : Se monta componente - renderiza
+//- re-Render : renderiza 1 vez, hay un cambio se renderiza una vez
+
+// REACT trabaja con 2 cosas
+// DOM: Renderiza el contenido del html, ve si hay un cambio dentro de...
+// DOM VIRTUAL: Que es una COPIA del dom pero con los cambios y ejecuta el RENDER
+//  RENDER- ejecutar la funcion, renderizar componentes, los componentes son funciones
+// este proceso de comparacion entre dom's, el proceso especifico de
+// aplicar el cambio es el COMMIT en react
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
